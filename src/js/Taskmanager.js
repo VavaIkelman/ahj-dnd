@@ -1,3 +1,4 @@
+// eslint-disable-next-line class-methods-use-this
 export default class Taskmanager {
   constructor(element) {
     this.taskmanager = element;
