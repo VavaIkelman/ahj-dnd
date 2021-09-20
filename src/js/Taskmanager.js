@@ -1,4 +1,3 @@
-// eslint-disable-next-line class-methods-use-this
 export default class Taskmanager {
   constructor(element) {
     this.taskmanager = element;
@@ -38,6 +37,7 @@ export default class Taskmanager {
   }
 
   render() {
+    /* eslint-disable-next-line */
     for (const column of this.columns) {
       column.innerHTML = '';
     }
@@ -191,6 +191,7 @@ export default class Taskmanager {
     const column = event.target.closest('.taskmanager__list');
     const columnItems = column.querySelectorAll('.taskmanager__item');
     const allPos = [column.getBoundingClientRect().top];
+    /* eslint-disable-next-line */
     for (const item of columnItems) {
       allPos.push(item.getBoundingClientRect().top + item.offsetHeight / 2);
     }
@@ -251,6 +252,7 @@ export default class Taskmanager {
     this.tasks = [[], [], []];
     for (let i = 0; i < this.columns.length; i += 1) {
       const tasksElement = this.columns[i].querySelectorAll('.taskmanager__item');
+      /* eslint-disable-next-line */
       for (const task of tasksElement) {
         this.tasks[i].push(task.innerText);
       }
